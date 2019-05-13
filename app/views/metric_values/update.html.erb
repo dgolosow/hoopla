@@ -1,0 +1,5 @@
+<h1>MetricValue Update</h1>
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+<%= link_to 'Back to Metric Values', metric_values_index_url(href: @metric['href'][0, @metric['href'].rindex('/')], owner: @metric['metric']['href']) %>

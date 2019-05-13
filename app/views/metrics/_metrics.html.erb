@@ -1,0 +1,9 @@
+<tr>
+    <td><%= link_to metric['name'],
+                    metric_values_index_path(href: metric['links'][0]['href'],
+                                             owner: metric['href'])
+    %></td>
+    <td><%= metric['type'] %></td>
+    <td><%= metric['format_rounded_to'] %></td>
+    <td><%= metric['currency_code'] %></td>
+</tr>

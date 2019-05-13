@@ -1,0 +1,7 @@
+<h1>MetricValue Edit</h1>
+<%= form_tag("/metric_values/update", method: "post") do %>
+    <%= hidden_field_tag(:metric, @metric_value.to_json) %>
+    <%= label_tag(:value, "Metric Value") %>
+    <%= text_field_tag(:value, @metric_value['value']) %>
+    <%= submit_tag("Save") %>
+<% end %>
